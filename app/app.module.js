@@ -9,14 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
-var courses_component_1 = require("./courses.component");
-var authors_component_1 = require("./authors.component");
-var messages_component_1 = require("./messages.component");
-var auto_grow_directive_1 = require("./auto-grow.directive");
-var favourite_component_1 = require("./favourite.component");
+var like_component_1 = require("./like.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,14 +19,10 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
+        imports: [platform_browser_1.BrowserModule],
         declarations: [
             app_component_1.AppComponent,
-            courses_component_1.CoursesComponent,
-            authors_component_1.AuthorsComponent,
-            messages_component_1.MessagesComponent,
-            auto_grow_directive_1.AutoGrowDirective,
-            favourite_component_1.FavouriteComponent
+            like_component_1.LikeComponent
         ],
         bootstrap: [app_component_1.AppComponent]
     }),

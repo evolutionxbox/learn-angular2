@@ -11,13 +11,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.tweets = [
+            {
+                isLiked: false,
+                totalLikes: 10
+            },
+            {
+                isLiked: true,
+                totalLikes: 1
+            },
+            {
+                isLiked: false,
+                totalLikes: 100
+            }
+        ];
     }
+    AppComponent.prototype.onChange = function ($event) {
+        console.log($event);
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: ""
+        template: "\n    <like\n      [is-liked]=\"tweets[0].isLiked\"\n      [total-likes]=\"tweets[0].totalLikes\"\n      (like-change)=\"onChange($event)\"></like>\n    <like\n      [is-liked]=\"tweets[1].isLiked\"\n      [total-likes]=\"tweets[1].totalLikes\"\n      (like-change)=\"onChange($event)\"></like>\n    <like\n      [is-liked]=\"tweets[2].isLiked\"\n      [total-likes]=\"tweets[2].totalLikes\"\n      (like-change)=\"onChange($event)\"></like>\n  "
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);
