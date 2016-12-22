@@ -9,17 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var tweets_service_1 = require("./tweets.service");
+var TweetsComponent = (function () {
+    function TweetsComponent(tweetsService) {
+        this.tweets = tweetsService.getAllTweets();
     }
-    return AppComponent;
+    return TweetsComponent;
 }());
-AppComponent = __decorate([
+TweetsComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "<tweets></tweets>"
+        selector: 'tweets',
+        template: "\n    <div class=\"tweets\">\n        <div *ngFor=\"let tweet of tweets\">\n            <tweet [data]=\"tweet\"></tweet>\n        </div>\n    </div>"
     }),
-    __metadata("design:paramtypes", [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+    __metadata("design:paramtypes", [tweets_service_1.TweetsService])
+], TweetsComponent);
+exports.TweetsComponent = TweetsComponent;
+//# sourceMappingURL=tweets.component.js.map

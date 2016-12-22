@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: ``
+  template: `<tweets></tweets>`
 })
 
-export class AppComponent {
-}
+export class AppComponent {}
