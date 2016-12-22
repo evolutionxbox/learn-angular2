@@ -1,13 +1,13 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
-import { LikeComponent }   from './like.component';
+import { VoterComponent }   from './voter.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
   declarations: [ 
     AppComponent,
-    LikeComponent
+    VoterComponent
   ],
   bootstrap:    [ AppComponent ]
 })
