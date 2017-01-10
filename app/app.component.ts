@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: ``
+  template: `<bs-panel></bs-panel>`
 })
 
 export class AppComponent {
