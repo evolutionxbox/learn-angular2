@@ -1,11 +1,14 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent }   from './app.component';
+import { SubscribeFormComponent } from './subscribe.form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ BrowserModule, FormsModule ],
   declarations: [ 
-    AppComponent
+    AppComponent,
+    SubscribeFormComponent
   ],
   bootstrap:    [ AppComponent ]
 })
